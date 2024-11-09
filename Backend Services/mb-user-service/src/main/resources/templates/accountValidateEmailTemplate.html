@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Account Verification Email</title>
+</head>
+<body style="font-family: Arial, sans-serif;">
+
+<div style="background-color: #f4f4f4; padding: 20px; text-align: center;">
+    <h1 style="color: #333333;">Account Verification</h1>
+</div>
+
+<div style="padding: 20px;">
+    <p>Hello <span th:text="${username}"></span>,</p>
+    <p>Thank you for registering an account with our service. Please use the following code to verify your account:</p>
+
+    <p style="font-size: 24px; font-weight: bold; margin-bottom: 20px; text-align: center"><span th:text="${verificationCode}"></span></p>
+
+    <p>If you need any assistance, please contact our support team.</p>
+
+    <p style="margin-top: 20px;">Best Regards,<br/>MegaBliss Service Team</p>
+</div>
+
+</body>
+</html>
