@@ -1,4 +1,4 @@
-package com.example.megablissapigatewayservice.exception;
+package com.example.apigatewayservice.exception;
 
 import org.springframework.http.HttpStatus;
 

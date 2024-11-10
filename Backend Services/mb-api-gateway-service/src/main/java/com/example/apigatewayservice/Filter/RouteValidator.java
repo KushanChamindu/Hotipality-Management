@@ -1,4 +1,4 @@
-package com.example.megablissapigatewayservice.Filter;
+package com.example.apigatewayservice.Filter;
 
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.stereotype.Component;

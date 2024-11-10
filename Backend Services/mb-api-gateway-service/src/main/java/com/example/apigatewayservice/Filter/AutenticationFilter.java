@@ -1,10 +1,9 @@
-package com.example.megablissapigatewayservice.Filter;
+package com.example.apigatewayservice.Filter;
 
-import com.example.megablissapigatewayservice.Util.JwtService;
-import com.example.megablissapigatewayservice.dao.mapper.ErrorMapper;
-import com.example.megablissapigatewayservice.exception.CustomError;
-import com.example.megablissapigatewayservice.exception.UnauthorisedException;
-
+import com.example.apigatewayservice.Util.JwtService;
+import com.example.apigatewayservice.dao.mapper.ErrorMapper;
+import com.example.apigatewayservice.exception.CustomError;
+import com.example.apigatewayservice.exception.UnauthorisedException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 
@@ -87,6 +86,7 @@ public class AutenticationFilter extends AbstractGatewayFilterFactory<Autenticat
             return chain.filter(exchange);
         });
     }
+
     public static class Config {
 
     }

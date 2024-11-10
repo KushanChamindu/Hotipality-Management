@@ -1,11 +1,12 @@
-package com.example.megablissapigatewayservice.exception;
+package com.example.apigatewayservice.exception;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.reactive.result.method.annotation.ResponseEntityExceptionHandler;
-import com.example.megablissapigatewayservice.dao.mapper.ErrorMapper;
+
+import com.example.apigatewayservice.dao.mapper.ErrorMapper;
 
 @ControllerAdvice
 public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
