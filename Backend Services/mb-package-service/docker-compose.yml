@@ -1,0 +1,30 @@
+version: "3.7" 
+services:
+  package_service:
+    build:
+      context: .    # path of the docker file location
+    image: docker_package_service_image:0.01  # docker image name and version
+    container_name: package_service
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://package_service_db:5432/packagedb
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: megadevdb
+    depends_on:
+      - package_service_db    
+
+  package_service_db:
+    container_name: package_service_db
+    image: "postgres"
+    restart: always  # restart if db crashed
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: megadevdb
+      POSTGRES_DB: packagedb
+    volumes:
+      - spring_dev_data:/var/lib/postgresql/data
+volumes:
+  spring_dev_data: {}
